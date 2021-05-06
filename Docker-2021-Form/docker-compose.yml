@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bibin-node
+    container_name: nodejs
+    volumes:
+      - "$IMAGE_DIR:/usr/src/app/public/images/"
+    ports:
+      - "3000:3000"
